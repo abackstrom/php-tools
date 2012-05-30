@@ -1,0 +1,24 @@
+body {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 67.5%;
+}
+
+textarea {
+	font-family: Inconsolata, Consolas, Monaco, monospace;
+	font-size: 1.2em;
+	white-space: pre;
+	word-wrap: normal;
+	height: 200px;
+	width: 100%;
+}
+
+h2 {
+	clear: both;
+}
+
+.col {
+	margin-right: 1.8%;
+	width: 45%;
+	float: left;
+	padding: 10px;
+}

@@ -2,26 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title></title>
-<style>
-body {
-	font-family: Verdana, Arial, sans-serif;
-	font-size: 67.5%;
-}
-textarea {
-	height: 200px;
-	width: 100%;
-}
-h2 {
-	clear: both;
-}
-.col {
-	margin-right: 1.8%;
-	width: 45%;
-	float: left;
-	padding: 10px;
-}
-</style>
+	<title>PHP Tools</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
@@ -34,8 +16,6 @@ require_once 'functions.php';
 ?>
 
 <h1>PHP Tools</h1>
-
-<h2>Expand Serialized</h2>
 
 <?php
 

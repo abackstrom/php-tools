@@ -25,7 +25,7 @@ abstract class AbstractAction
 
 	public function esc_raw()
 	{
-		return nl2br( htmlentities( $this->value ) );
+		return htmlentities( $this->value );
 	}
 
 	abstract public function decode();
