@@ -37,12 +37,21 @@ if( 'POST' === $_SERVER['REQUEST_METHOD'] ) {
 				<option value="Urlencode" <?php echo selected($_POST['action'], 'Urlencode'); ?>>urlencode()</option>
 				<option value="Urldecode"<?php echo selected($_POST['action'], 'Urldecode'); ?>>urldecode()</option>
 				<option value="Unserialize"<?php echo selected($_POST['action'], 'Unserialize'); ?>>unserialize()</option>
+				<option value="Base64Decode"<?php echo selected($_POST['action'], 'Base64Decode'); ?>>base64_decode()</option>
+				<option value="Base64Encode"<?php echo selected($_POST['action'], 'Base64Encode'); ?>>base64_encode()</option>
 			<select>
 			<input type="submit">
 		</form>
 	</div>
 	<?php if( $action ) echo $action; ?>
 </div>
+
+<h2>Randomness</h2>
+
+<ul>
+	<li>MD5: <input class="randomness-box" value="<?php echo md5(uniqid(mt_rand(), true)); ?>"></li>
+	<li>SHA1: <input class="randomness-box" value="<?php echo sha1(uniqid(mt_rand(), true)); ?>"></li>
+</ul>
 
 </body>
 </html>

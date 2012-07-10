@@ -53,6 +53,36 @@ class ActionQuotedPrintableDecode extends AbstractAction
 	}
 }
 
+class ActionBase64Encode extends AbstractAction
+{
+	public function __construct( $value )
+	{
+		parent::__construct( $value );
+		$this->setContainer( new TextareaContainer );
+		$this->setFormatter( new EchoFormatter );
+	}
+
+	public function decode()
+	{
+		return base64_encode( $this->value );
+	}
+}
+
+class ActionBase64Decode extends AbstractAction
+{
+	public function __construct( $value )
+	{
+		parent::__construct( $value );
+		$this->setContainer( new TextareaContainer );
+		$this->setFormatter( new EchoFormatter );
+	}
+
+	public function decode()
+	{
+		return base64_decode( $this->value );
+	}
+}
+
 class ActionUrldecode extends AbstractAction
 {
 	public function __construct( $value )
