@@ -20,9 +20,10 @@ require_once 'functions.php';
 <?php
 
 $action = null;
+$action_str = isset($_POST['action']) ? $_POST['action'] : null;
 
 if( 'POST' === $_SERVER['REQUEST_METHOD'] ) {
-	$class = "Action" . $_POST['action'];
+	$class = "Action" . $action_str;
 	$action = new $class( $_POST['data'] );
 }
 
@@ -33,12 +34,13 @@ if( 'POST' === $_SERVER['REQUEST_METHOD'] ) {
 		<form method="post">
 			<textarea class="data" name="data"><?php if( $action ) echo $action->esc_raw(); ?></textarea><br>
 			<select name="action">
-				<option value="QuotedPrintableDecode" <?php echo selected($_POST['action'], 'QuotedPrintableDecode'); ?>>quoted_printable_decode()</option>
-				<option value="Urlencode" <?php echo selected($_POST['action'], 'Urlencode'); ?>>urlencode()</option>
-				<option value="Urldecode"<?php echo selected($_POST['action'], 'Urldecode'); ?>>urldecode()</option>
-				<option value="Unserialize"<?php echo selected($_POST['action'], 'Unserialize'); ?>>unserialize()</option>
-				<option value="Base64Decode"<?php echo selected($_POST['action'], 'Base64Decode'); ?>>base64_decode()</option>
-				<option value="Base64Encode"<?php echo selected($_POST['action'], 'Base64Encode'); ?>>base64_encode()</option>
+				<option value="DoubleEntityDecode" <?php echo selected($action_str, 'DoubleEntityDecode'); ?>>html_entity_decode(html_entity_decode())</option>
+				<option value="QuotedPrintableDecode" <?php echo selected($action_str, 'QuotedPrintableDecode'); ?>>quoted_printable_decode()</option>
+				<option value="Urlencode" <?php echo selected($action_str, 'Urlencode'); ?>>urlencode()</option>
+				<option value="Urldecode"<?php echo selected($action_str, 'Urldecode'); ?>>urldecode()</option>
+				<option value="Unserialize"<?php echo selected($action_str, 'Unserialize'); ?>>unserialize()</option>
+				<option value="Base64Decode"<?php echo selected($action_str, 'Base64Decode'); ?>>base64_decode()</option>
+				<option value="Base64Encode"<?php echo selected($action_str, 'Base64Encode'); ?>>base64_encode()</option>
 			<select>
 			<input type="submit">
 		</form>

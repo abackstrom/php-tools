@@ -68,6 +68,21 @@ class ActionBase64Encode extends AbstractAction
 	}
 }
 
+class ActionDoubleEntityDecode extends AbstractAction
+{
+	public function __construct( $value )
+	{
+		parent::__construct( $value );
+		$this->setContainer( new TextareaContainer );
+		$this->setFormatter( new EchoFormatter );
+	}
+
+	public function decode()
+	{
+		return html_entity_decode( html_entity_decode( $this->value, ENT_QUOTES, 'UTF-8' ), ENT_QUOTES, 'UTF-8' );
+	}
+}
+
 class ActionBase64Decode extends AbstractAction
 {
 	public function __construct( $value )
@@ -145,7 +160,7 @@ class TextareaContainer extends DivContainer
 {
 	public function wrap( $contents )
 	{
-		return parent::wrap( '<textarea>' . $contents . '</textarea>' );
+		return parent::wrap( '<textarea>' . htmlentities($contents) . '</textarea>' );
 	}
 }
 
