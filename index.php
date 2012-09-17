@@ -36,6 +36,7 @@ if( 'POST' === $_SERVER['REQUEST_METHOD'] ) {
 			<select name="action">
 				<option value="DoubleEntityDecode" <?php echo selected($action_str, 'DoubleEntityDecode'); ?>>html_entity_decode(html_entity_decode())</option>
 				<option value="QuotedPrintableDecode" <?php echo selected($action_str, 'QuotedPrintableDecode'); ?>>quoted_printable_decode()</option>
+				<option value="QuotedPrintableEncode" <?php echo selected($action_str, 'QuotedPrintableEncode'); ?>>quoted_printable_encode()</option>
 				<option value="Urlencode" <?php echo selected($action_str, 'Urlencode'); ?>>urlencode()</option>
 				<option value="Urldecode"<?php echo selected($action_str, 'Urldecode'); ?>>urldecode()</option>
 				<option value="Unserialize"<?php echo selected($action_str, 'Unserialize'); ?>>unserialize()</option>

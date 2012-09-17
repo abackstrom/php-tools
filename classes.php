@@ -53,6 +53,21 @@ class ActionQuotedPrintableDecode extends AbstractAction
 	}
 }
 
+class ActionQuotedPrintableEncode extends AbstractAction
+{
+	public function __construct( $value )
+	{
+		parent::__construct( $value );
+		$this->setContainer( new TextareaContainer );
+		$this->setFormatter( new EchoFormatter );
+	}
+
+	public function decode()
+	{
+		return quoted_printable_encode( $this->value );
+	}
+}
+
 class ActionBase64Encode extends AbstractAction
 {
 	public function __construct( $value )
