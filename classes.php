@@ -1,5 +1,7 @@
 <?php
 
+use \Ospinto\Dbug;
+
 abstract class AbstractAction
 {
     protected $value;

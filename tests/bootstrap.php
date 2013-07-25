@@ -2,6 +2,6 @@
 
 date_default_timezone_set('UTC');
 
-require_once 'dBug.php';
-require_once 'classes.php';
-require_once 'functions.php';
+require dirname(__DIR__) . '/vendor/autoload.php';
+require dirname(__DIR__) . '/classes.php';
+require dirname(__DIR__) . '/functions.php';

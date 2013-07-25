@@ -9,9 +9,10 @@
 
 <?php
 
-require_once 'dBug.php';
-require_once 'classes.php';
-require_once 'functions.php';
+require __DIR__ . '/vendor/autoload.php';
+
+require __DIR__ . '/classes.php';
+require __DIR__ . '/functions.php';
 
 ?>
 
