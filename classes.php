@@ -173,6 +173,28 @@ class ActionJsonEncode extends AbstractAction
     }
 }
 
+class ActionDateC extends AbstractAction
+{
+    public function __construct( $value )
+    {
+        parent::__construct( $value );
+
+        $this->setContainer( new DivContainer );
+        $this->setFormatter( new DbugFormatter );
+    }
+
+    public function decode()
+    {
+        $results = array();
+
+        array_map(function($value) use (&$results) {
+            $results[$value] = date('c', $value);
+        }, explode("\n", $this->value));
+
+        return $results;
+    }
+}
+
 interface ContainerInterface
 {
     public function wrap( $contents );

@@ -43,6 +43,7 @@ if( 'POST' === $_SERVER['REQUEST_METHOD'] ) {
                 <option value="Base64Encode" <?php echo selected($action_str, 'Base64Encode'); ?>>base64_encode()</option>
                 <option value="JsonDecode" <?php echo selected($action_str, 'JsonDecode'); ?>>json_decode()</option>
                 <option value="JsonEncode" <?php echo selected($action_str, 'JsonEncode'); ?>>json_encode()</option>
+                <option value="DateC" <?php echo selected($action_str, 'DateC'); ?>>date('c', %s)</option>
             <select>
             <input type="submit">
         </form>
