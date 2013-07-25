@@ -51,12 +51,13 @@ if( 'POST' === $_SERVER['REQUEST_METHOD'] ) {
     <?php if( $action ) echo $action; ?>
 </div>
 
-<h2>Randomness</h2>
-
-<ul>
-    <li>MD5: <input class="randomness-box" value="<?php echo md5(uniqid(mt_rand(), true)); ?>"></li>
-    <li>SHA1: <input class="randomness-box" value="<?php echo sha1(uniqid(mt_rand(), true)); ?>"></li>
-</ul>
+<section class="randomness">
+    <h2>Randomness</h2>
+    <ul>
+        <li><label for="md5">MD5</label><input id="md5" class="randomness-box" value="<?php echo md5(uniqid(mt_rand(), true)); ?>"></li>
+        <li><label for="sha1">SHA1</label><input id="sha1" class="randomness-box" value="<?php echo sha1(uniqid(mt_rand(), true)); ?>"></li>
+    </ul>
+</section>
 
 </body>
 </html>
