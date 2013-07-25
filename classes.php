@@ -11,7 +11,11 @@ abstract class AbstractAction
     public function __construct( $value )
     {
         $this->value = $value;
+        $this->setUp();
     }
+
+    abstract public function decode();
+    abstract public function setUp();
 
     public function setContainer( ContainerInterface $container )
     {
@@ -28,8 +32,6 @@ abstract class AbstractAction
         return htmlentities( $this->value );
     }
 
-    abstract public function decode();
-
     public function __toString()
     {
         $value = $this->decode();
@@ -40,9 +42,8 @@ abstract class AbstractAction
 
 class ActionQuotedPrintableDecode extends AbstractAction
 {
-    public function __construct( $value )
+    public function setUp()
     {
-        parent::__construct( $value );
         $this->setContainer( new TextareaContainer );
         $this->setFormatter( new EchoFormatter );
     }
@@ -55,9 +56,8 @@ class ActionQuotedPrintableDecode extends AbstractAction
 
 class ActionQuotedPrintableEncode extends AbstractAction
 {
-    public function __construct( $value )
+    public function setUp()
     {
-        parent::__construct( $value );
         $this->setContainer( new TextareaContainer );
         $this->setFormatter( new EchoFormatter );
     }
@@ -70,9 +70,8 @@ class ActionQuotedPrintableEncode extends AbstractAction
 
 class ActionBase64Encode extends AbstractAction
 {
-    public function __construct( $value )
+    public function setUp()
     {
-        parent::__construct( $value );
         $this->setContainer( new TextareaContainer );
         $this->setFormatter( new EchoFormatter );
     }
@@ -85,9 +84,8 @@ class ActionBase64Encode extends AbstractAction
 
 class ActionBase64Decode extends AbstractAction
 {
-    public function __construct( $value )
+    public function setUp()
     {
-        parent::__construct( $value );
         $this->setContainer( new TextareaContainer );
         $this->setFormatter( new EchoFormatter );
     }
@@ -100,9 +98,8 @@ class ActionBase64Decode extends AbstractAction
 
 class ActionUrldecode extends AbstractAction
 {
-    public function __construct( $value )
+    public function setUp()
     {
-        parent::__construct( $value );
         $this->setContainer( new TextareaContainer );
         $this->setFormatter( new EchoFormatter );
     }
@@ -115,9 +112,8 @@ class ActionUrldecode extends AbstractAction
 
 class ActionUrlencode extends AbstractAction
 {
-    public function __construct( $value )
+    public function setUp()
     {
-        parent::__construct( $value );
         $this->setContainer( new TextareaContainer );
         $this->setFormatter( new EchoFormatter );
     }
@@ -130,9 +126,8 @@ class ActionUrlencode extends AbstractAction
 
 class ActionUnserialize extends AbstractAction
 {
-    public function __construct( $value )
+    public function setUp()
     {
-        parent::__construct( $value );
         $this->setContainer( new DivContainer );
         $this->setFormatter( new DbugFormatter );
     }
@@ -145,9 +140,8 @@ class ActionUnserialize extends AbstractAction
 
 class ActionJsonDecode extends AbstractAction
 {
-    public function __construct( $value )
+    public function setUp()
     {
-        parent::__construct( $value );
         $this->setContainer( new DivContainer );
         $this->setFormatter( new VarexportFormatter );
     }
@@ -160,9 +154,8 @@ class ActionJsonDecode extends AbstractAction
 
 class ActionJsonEncode extends AbstractAction
 {
-    public function __construct( $value )
+    public function setUp()
     {
-        parent::__construct( $value );
         $this->setContainer( new TextareaContainer );
         $this->setFormatter( new EchoFormatter );
     }
@@ -175,10 +168,8 @@ class ActionJsonEncode extends AbstractAction
 
 class ActionDateC extends AbstractAction
 {
-    public function __construct( $value )
+    public function setUp()
     {
-        parent::__construct( $value );
-
         $this->setContainer( new DivContainer );
         $this->setFormatter( new DbugFormatter );
     }
