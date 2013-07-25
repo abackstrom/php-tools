@@ -38,6 +38,7 @@ if( 'POST' === $_SERVER['REQUEST_METHOD'] ) {
                 <option value="QuotedPrintableEncode" <?php echo selected($action_str, 'QuotedPrintableEncode'); ?>>quoted_printable_encode()</option>
                 <option value="Urlencode" <?php echo selected($action_str, 'Urlencode'); ?>>urlencode()</option>
                 <option value="Urldecode" <?php echo selected($action_str, 'Urldecode'); ?>>urldecode()</option>
+                <option value="Serialize" <?php echo selected($action_str, 'Serialize'); ?>>serialize()</option>
                 <option value="Unserialize" <?php echo selected($action_str, 'Unserialize'); ?>>unserialize()</option>
                 <option value="Base64Decode" <?php echo selected($action_str, 'Base64Decode'); ?>>base64_decode()</option>
                 <option value="Base64Encode" <?php echo selected($action_str, 'Base64Encode'); ?>>base64_encode()</option>
