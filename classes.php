@@ -124,6 +124,20 @@ class ActionUrlencode extends AbstractAction
     }
 }
 
+class ActionSerialize extends AbstractAction
+{
+    public function setUp()
+    {
+        $this->setContainer( new TextareaContainer );
+        $this->setFormatter( new EchoFormatter );
+    }
+
+    public function decode()
+    {
+        return serialize( $this->value );
+    }
+}
+
 class ActionUnserialize extends AbstractAction
 {
     public function setUp()
