@@ -37,10 +37,12 @@ if( 'POST' === $_SERVER['REQUEST_METHOD'] ) {
                 <option value="QuotedPrintableDecode" <?php echo selected($action_str, 'QuotedPrintableDecode'); ?>>quoted_printable_decode()</option>
                 <option value="QuotedPrintableEncode" <?php echo selected($action_str, 'QuotedPrintableEncode'); ?>>quoted_printable_encode()</option>
                 <option value="Urlencode" <?php echo selected($action_str, 'Urlencode'); ?>>urlencode()</option>
-                <option value="Urldecode"<?php echo selected($action_str, 'Urldecode'); ?>>urldecode()</option>
-                <option value="Unserialize"<?php echo selected($action_str, 'Unserialize'); ?>>unserialize()</option>
-                <option value="Base64Decode"<?php echo selected($action_str, 'Base64Decode'); ?>>base64_decode()</option>
-                <option value="Base64Encode"<?php echo selected($action_str, 'Base64Encode'); ?>>base64_encode()</option>
+                <option value="Urldecode" <?php echo selected($action_str, 'Urldecode'); ?>>urldecode()</option>
+                <option value="Unserialize" <?php echo selected($action_str, 'Unserialize'); ?>>unserialize()</option>
+                <option value="Base64Decode" <?php echo selected($action_str, 'Base64Decode'); ?>>base64_decode()</option>
+                <option value="Base64Encode" <?php echo selected($action_str, 'Base64Encode'); ?>>base64_encode()</option>
+                <option value="JsonDecode" <?php echo selected($action_str, 'JsonDecode'); ?>>json_decode()</option>
+                <option value="JsonEncode" <?php echo selected($action_str, 'JsonEncode'); ?>>json_encode()</option>
             <select>
             <input type="submit">
         </form>
