@@ -59,5 +59,9 @@ if( 'POST' === $_SERVER['REQUEST_METHOD'] ) {
     </ul>
 </section>
 
+<footer>
+    <a href="https://github.com/abackstrom/php-tools">php-tools</a> by <a href="https://github.com/abackstrom">abackstrom</a>.
+</footer>
+
 </body>
 </html>

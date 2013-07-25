@@ -9,6 +9,14 @@ body {
     margin: 0;
 }
 
+a {
+    color: #54b4e8;
+}
+
+a:hover {
+    color: #44a0d2;
+}
+
 label {
     display: inline-block;
     margin-right: 0.5rem;
@@ -69,6 +77,13 @@ h2 {
     clear: both;
     letter-spacing: 0.05em;
     padding: 0.5rem 0;
+}
+
+footer {
+    border-top: 1px solid #eee;
+    color: #ccc;
+    opacity: 0.5;
+    padding: 1rem;
 }
 
 .randomness,
