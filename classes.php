@@ -136,7 +136,7 @@ class ActionSerialize extends AbstractAction
 
     public function decode()
     {
-        return serialize( $this->value );
+        return serialize( json_decode( $this->value ) );
     }
 }
 
