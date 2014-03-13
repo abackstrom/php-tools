@@ -202,6 +202,22 @@ class ActionDateC extends AbstractAction
     }
 }
 
+class ActionParseStr extends AbstractAction
+{
+    public function setUp()
+    {
+        $this->setContainer( new DivContainer );
+        $this->setFormatter( new DbugFormatter );
+    }
+
+    public function decode()
+    {
+        parse_str($this->value, $results);
+
+        return $results;
+    }
+}
+
 interface ContainerInterface
 {
     public function wrap( $contents );
