@@ -46,6 +46,7 @@ if( 'POST' === $_SERVER['REQUEST_METHOD'] ) {
                 <option value="JsonDecode" <?php echo selected($action_str, 'JsonDecode'); ?>>json_decode()</option>
                 <option value="JsonEncode" <?php echo selected($action_str, 'JsonEncode'); ?>>json_encode()</option>
                 <option value="DateC" <?php echo selected($action_str, 'DateC'); ?>>date('c', $timestamp)</option>
+                <option value="Strtotime" <?php echo selected($action_str, 'Strtotime'); ?>>strtotime()</option>
                 <option value="ParseStr" <?php echo selected($action_str, 'ParseStr'); ?>>parse_str()</option>
                 <option value="Ansi2Html" <?php echo selected($action_str, 'Ansi2HTml'); ?>>ansi-to-html</option>
             <select>

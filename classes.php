@@ -203,6 +203,31 @@ class ActionDateC extends AbstractAction
     }
 }
 
+class ActionStrtotime extends AbstractAction
+{
+    public function setUp()
+    {
+        $this->setContainer( new DivContainer );
+        $this->setFormatter( new EchoFormatter );
+    }
+
+    public function decode()
+    {
+        $tz = date_default_timezone_get();
+        date_default_timezone_set('UTC');
+
+        $time = strtotime($this->value);
+        $str_utc = date('c', $time);
+
+        date_default_timezone_set('America/New_York');
+        $str_ny = date('c', $time);
+
+        date_default_timezone_set($tz);
+
+        return "$time<br>$str_utc<br>$str_ny";
+    }
+}
+
 class ActionAnsi2Html extends AbstractAction
 {
     public function setUp()
