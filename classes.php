@@ -232,7 +232,7 @@ class ActionAnsi2Html extends AbstractAction
 {
     public function setUp()
     {
-        $this->setContainer( new DivContainer );
+        $this->setContainer( new TextareaContainer );
         $this->setFormatter( new EchoFormatter );
     }
 
@@ -276,7 +276,7 @@ class TextareaContainer extends DivContainer
 {
     public function wrap( $contents )
     {
-        return parent::wrap( '<textarea>' . htmlentities($contents) . '</textarea>' );
+        return parent::wrap( '<textarea>' . $contents . '</textarea>' );
     }
 }
 
