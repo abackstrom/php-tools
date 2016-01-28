@@ -60,6 +60,11 @@ if( 'POST' === $_SERVER['REQUEST_METHOD'] ) {
                 <input type="text" class="math-solution boxed full-width" style="display: none;">
             </div>
         </div>
+
+        <h2>Other</h2>
+        <ul>
+            <li><a href="https://www.wellsfargo.com/biz/loans-and-lines/repayment-calculator/">Loan repayment calculator</a></li>
+        </ul>
     </div>
     <?php if( $action ) echo $action; ?>
 </div>
