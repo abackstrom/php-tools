@@ -1,6 +1,6 @@
 {
     "require": {
-        "sunra/dbug": "dev-master",
-        "sensiolabs/ansi-to-html": "dev-master"
+        "sunra/dbug": "^0.2.1",
+        "sensiolabs/ansi-to-html": "^1.1.2"
     }
 }

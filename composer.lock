@@ -4,20 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8c58122fd0aae101763d925ad7f73b6f",
+    "hash": "68c389764eb0d215184e0e14af0d4267",
+    "content-hash": "3e1015987757a3bbd1106c71851fd6d4",
     "packages": [
         {
             "name": "sensiolabs/ansi-to-html",
-            "version": "dev-master",
+            "version": "v1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/ansi-to-html.git",
-                "reference": "fd0aa98170e12131ab989c39252df076cff60121"
+                "reference": "02598b975c510e9e7d07d0be0a89c7a6b43464d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/ansi-to-html/zipball/fd0aa98170e12131ab989c39252df076cff60121",
-                "reference": "fd0aa98170e12131ab989c39252df076cff60121",
+                "url": "https://api.github.com/repos/sensiolabs/ansi-to-html/zipball/02598b975c510e9e7d07d0be0a89c7a6b43464d6",
+                "reference": "02598b975c510e9e7d07d0be0a89c7a6b43464d6",
                 "shasum": ""
             },
             "require": {
@@ -48,20 +49,20 @@
                 }
             ],
             "description": "A library to convert a text with ANSI codes to HTML",
-            "time": "2015-03-17 06:34:10"
+            "time": "2015-07-22 03:07:58"
         },
         {
             "name": "sunra/dbug",
-            "version": "dev-master",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sunra/dBug.git",
-                "reference": "a71fafedd94eea2f85106024502f324766b575bf"
+                "reference": "ecd8a589dc3ee1bba84095828c222ff560bc19e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sunra/dBug/zipball/a71fafedd94eea2f85106024502f324766b575bf",
-                "reference": "a71fafedd94eea2f85106024502f324766b575bf",
+                "url": "https://api.github.com/repos/sunra/dBug/zipball/ecd8a589dc3ee1bba84095828c222ff560bc19e5",
+                "reference": "ecd8a589dc3ee1bba84095828c222ff560bc19e5",
                 "shasum": ""
             },
             "require": {
@@ -69,19 +70,23 @@
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "Ospinto\\Dbug": "lib/"
+                "psr-4": {
+                    "Ospinto\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "GPL-3.0"
             ],
             "authors": [
                 {
                     "name": "sunra",
                     "email": "sunra@yandex.ru",
                     "homepage": "http://github.com/sunra"
+                },
+                {
+                    "name": "Kwaku Otchere",
+                    "email": "ospinto@hotmail.com"
                 }
             ],
             "description": "Most beautiful variable dump library for PHP (ColdFusion like style)",
@@ -91,16 +96,13 @@
                 "dump",
                 "php"
             ],
-            "time": "2012-12-03 14:51:37"
+            "time": "2015-12-14 22:37:24"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "sunra/dbug": 20,
-        "sensiolabs/ansi-to-html": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
