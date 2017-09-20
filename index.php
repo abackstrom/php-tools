@@ -64,6 +64,7 @@ if( 'POST' === $_SERVER['REQUEST_METHOD'] ) {
         <h2>Other</h2>
         <ul>
             <li><a href="https://www.wellsfargo.com/biz/loans-and-lines/repayment-calculator/">Loan repayment calculator</a></li>
+            <li><a href="https://blog.tersmitten.nl/slugify/">Slugify</a></li>
         </ul>
     </div>
     <?php if( $action ) echo $action; ?>
