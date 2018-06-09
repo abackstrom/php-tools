@@ -11,6 +11,6 @@ libraries.  You'll need to install that.
 
 ## Install
 
-    git clone https://github.com/abackstrom/php-tools.git
+    git clone https://git.abackstrom.com/annika/php-tools.git
     cd php-tools
     composer install
